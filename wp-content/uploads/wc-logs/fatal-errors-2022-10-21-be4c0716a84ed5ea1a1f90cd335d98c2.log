@@ -1,0 +1,12 @@
+2022-10-21T09:20:11+00:00 CRITICAL syntax error, unexpected token ")" in C:\xampp\htdocs\test\wp-content\themes\shose-store\functions.php on line 1108
+
+2022-10-21T09:25:55+00:00 CRITICAL Uncaught ArgumentCountError: Too few arguments to function wp_create_user(), 1 passed in C:\xampp\htdocs\test\wp-content\themes\shose-store\functions.php on line 1109 and at least 2 expected in C:\xampp\htdocs\test\wp-includes\user.php:2715
+Stack trace:
+#0 C:\xampp\htdocs\test\wp-content\themes\shose-store\functions.php(1109): wp_create_user(Array)
+#1 C:\xampp\htdocs\test\wp-includes\class-wp-hook.php(307): register_user('')
+#2 C:\xampp\htdocs\test\wp-includes\class-wp-hook.php(331): WP_Hook->apply_filters('', Array)
+#3 C:\xampp\htdocs\test\wp-includes\plugin.php(476): WP_Hook->do_action(Array)
+#4 C:\xampp\htdocs\test\wp-admin\admin-ajax.php(187): do_action('wp_ajax_registe...')
+#5 {main}
+  thrown in C:\xampp\htdocs\test\wp-includes\user.php on line 2715
+

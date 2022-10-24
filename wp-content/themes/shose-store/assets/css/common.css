@@ -1,0 +1,43 @@
+.h-300 {
+    height: 300px;
+}
+
+.h-350 {
+    height: 350px;
+}
+
+.hr-70 {
+    height: 70%;
+}
+
+.wr-25 {
+    width: 24%;
+}
+
+.gap-5 {
+    gap: 5px
+}
+
+.gap-10 {
+    gap: 10px
+}
+
+.gap-50 {
+    gap: 50px
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.border-g {
+    border: 1px solid gray;
+}
+
+.box-shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
