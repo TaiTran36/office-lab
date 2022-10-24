@@ -1,0 +1,26 @@
+{
+  "name": "wpsass",
+  "version": "1.0.0",
+  "description": "Use Sass with WordPress, Node Script in SCSS flavour.",
+  "scripts": {
+    "css": "node-sass --output-style compressed --include-path scss assets/scss/style.scss style.css",
+    "watch": "nodemon -e scss -x \"npm run css\"",
+    "page": "node-sass assets/scss/components/my_page.scss -o assets/css/",
+    "common": "node-sass assets/scss/components/coming-soon.scss -o assets/css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahmadawais/WPSass.git"
+  },
+  "author": "Ahmad Awais",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahmadawais/WPSass/issues"
+  },
+  "homepage": "https://github.com/ahmadawais/WPSass#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "node-sass": "^7.0.3",
+    "nodemon": "^2.0.20"
+  }
+}
