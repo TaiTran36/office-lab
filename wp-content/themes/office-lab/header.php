@@ -17,135 +17,135 @@
 <body class="main-layout">
     <div class="header_section">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="logo"><a href="#"><img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/logo.png'?>"></a></div>
+            <div class="row" style="padding: 20px 0">
+                <div class="logo_header">
+                    <img src="<?= get_stylesheet_directory_uri() . '/assets/images/logo-royal.png'?>" alt="">
                 </div>
-                <div class="col-sm-9">
-                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                            <div class="navbar-nav">
-                                <a class="nav-item nav-link" href="<?php echo get_home_url()?>">Home</a>
-                                <a class="nav-item nav-link" href="<?php echo get_post_type_archive_link('collection'); ?>">Collection</a>
-                                <a class="nav-item nav-link" href="<?php echo site_url('shop'); ?>">Shoes</a>
-                                <a class="nav-item nav-link" href="<?php echo site_url('racing-boots'); ?>">Racing Boots</a>
-                                <a class="nav-item nav-link" href="<?php echo site_url('contact'); ?>">Contact</a>
-                                <a class="nav-item nav-link last" href="javascript:void(0)"><img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/search_icon.png'?>"></a>
-                                <a class="nav-item nav-link last" href="<?php echo site_url('racing-boots'); ?>"><img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/shop_icon.png'?>"></a>
+                <div class="menu_bar_header">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#">Shop</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#" tabindex="-1">Best Seller</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#" tabindex="-1">Blog</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#" tabindex="-1">Sale Products</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="#" tabindex="-1">Contact</a>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </nav>
                 </div>
+                <div class="auth_header" style="display: flex">
+                    <div>
+                        <form>
+                            <div class="input-group">
+                                <input type="text" class="form-control form-group" placeholder="Search">
+                            </div>
+                        </form>
+                    </div>
+                    <span><img src="<?= get_stylesheet_directory_uri() . '/assets/images/cart.svg'?>" alt=""></span>
+                    <div><img src="<?= get_stylesheet_directory_uri() . '/assets/images/search.svg'?>" alt=""></div>
+                </div>
             </div>
         </div>
-        <?php if(is_home()): ?>
-        <div class="banner_section">
-            <div class="container-fluid">
-                <section class="slide-wrapper">
-                    <div class="container-fluid">
-                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                            <!-- Indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#myCarousel" data-slide-to="1"></li>
-                                <li data-target="#myCarousel" data-slide-to="2"></li>
-                                <li data-target="#myCarousel" data-slide-to="3"></li>
-                            </ol>
+    </div>
+    <div class="component_full">
+        <div class="container">
+            <div class="main_left">
+                <button class="btn btn-categories" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                   <div>
+                       <span><img src="<?= get_stylesheet_directory_uri() . '/assets/images/menu_toggle.svg'?>" alt=""></span> Categories
+                   </div>
+                    <div>
+                        <span><img src="<?= get_stylesheet_directory_uri() . '/assets/images/arrow_up.svg'?>" alt=""></span>
+                    </div>
+                </button>
+                <div class="collapse" id="collapseExample">
+                    <?php wp_nav_menu( array(
+                            'theme_location'  => 'primary',
+                            'menu'            => 'Top Navigation Menu',
+                            'container'       => 'div',
+                            'container_class' => 'collapse show navbar-collapse container-shop-category',
+                            'container_id'    => 'top_nav_cats',
+                            'menu_id'         => 'menu_top_nav_cats',
+                            'menu_class'      => 'menu_top_nav_cats navbar-nav mr-auto',
+                            'fallback_cb'     => 'WP_Bootstrap_Navwalker::fallback',
+                            'device_type'      => '__sp', )
+                    );
+                    ?>
+                </div>
 
-                            <!-- Wrapper for slides -->
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="row">
-                                        <div class="col-sm-2 padding_0">
-                                            <p class="mens_taital">Men Shoes</p>
-                                            <div class="page_no">0/2</div>
-                                            <p class="mens_taital_2">Men Shoes</p>
-                                        </div>
-                                        <div class="col-sm-5">
-                                            <div class="banner_taital">
-                                                <h1 class="banner_text">New Running Shoes </h1>
-                                                <h1 class="mens_text"><strong>Men's Like Plex</strong></h1>
-                                                <p class="lorem_text">ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                                <button class="buy_bt">Buy Now</button>
-                                                <button class="more_bt">See More</button>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-5">
-                                            <div class="shoes_img"><img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/running-shoes.png'?>"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col-sm-2 padding_0">
-                                            <p class="mens_taital">Men Shoes</p>
-                                            <div class="page_no">0/2</div>
-                                            <p class="mens_taital_2">Men Shoes</p>
-                                        </div>
-                                        <div class="col-sm-5">
-                                            <div class="banner_taital">
-                                                <h1 class="banner_text">New Running Shoes </h1>
-                                                <h1 class="mens_text"><strong>Men's Like Plex</strong></h1>
-                                                <p class="lorem_text">ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                                <button class="buy_bt">Buy Now</button>
-                                                <button class="more_bt">See More</button>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-5">
-                                            <div class="shoes_img"><img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/running-shoes.png'?>"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col-sm-2 padding_0">
-                                            <p class="mens_taital">Men Shoes</p>
-                                            <div class="page_no">0/2</div>
-                                            <p class="mens_taital_2">Men Shoes</p>
-                                        </div>
-                                        <div class="col-sm-5">
-                                            <div class="banner_taital">
-                                                <h1 class="banner_text">New Running Shoes </h1>
-                                                <h1 class="mens_text"><strong>Men's Like Plex</strong></h1>
-                                                <p class="lorem_text">ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                                <button class="buy_bt">Buy Now</button>
-                                                <button class="more_bt">See More</button>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-5">
-                                            <div class="shoes_img"><img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/running-shoes.png'?>"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col-sm-2 padding_0">
-                                            <p class="mens_taital">Men Shoes</p>
-                                            <div class="page_no">0/2</div>
-                                            <p class="mens_taital_2">Men Shoes</p>
-                                        </div>
-                                        <div class="col-sm-5">
-                                            <div class="banner_taital">
-                                                <h1 class="banner_text">New Running Shoes </h1>
-                                                <h1 class="mens_text"><strong>Men's Like Plex</strong></h1>
-                                                <p class="lorem_text">ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                                <button class="buy_bt">Buy Now</button>
-                                                <button class="more_bt">See More</button>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-5">
-                                            <div class="shoes_img"><img src="<?php echo get_stylesheet_directory_uri() . '/assets/images/running-shoes.png'?>"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+            </div>
+
+            <div class="main_right" style="flex-grow: 2;order: 3">
+                <div style="border: 1px solid #000000">
+                    <div>Feature Products</div>
+                </div>
+            </div>
+            <div class="main_center" style="flex-grow: 6;order: 2">
+                <?php
+                    global $wp;
+                    if (home_url( $wp->request ) == get_home_url()): ?>
+                    <div class="banner">
+                        <?php
+                        echo do_shortcode('[smartslider3 slider="2"]');
+                        ?>
+                    </div>
+                    <div class="shop_feature" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px">
+                    <?php
+                        $items = (object)[
+                            (object)[
+                                    'icon' => 'fa fa-plane',
+                                    'small_text' => 'Free Shipping',
+                                    'big_text' => 'On all order above $22',
+                                ],
+                            (object)[
+                                    'icon' => 'fa fa-commenting',
+                                    'small_text' => 'Support 24x7',
+                                    'big_text' => '24 hours Assistance',
+                                ],
+                            (object)[
+                                    'icon' => 'fa fa-child',
+                                    'small_text' => 'Zero Contact',
+                                    'big_text' => 'No contact delivery',
+                                ],
+                            (object)[
+                                    'icon' => 'fa fa-coffee',
+                                    'small_text' => 'Risk Free',
+                                    'big_text' => '14 days money back guarantee',
+                                ],
+                        ];
+
+                        foreach($items as $item):
+                    ?>
+
+                    <div class="item" style="padding: 15px 20px; display: flex;align-items: center; max-width: 23.5%">
+                        <div class="icon" style="font-size: 35px; margin-right: 20px; color: #c90000">
+                            <i class="<?= $item->icon ?>"></i>
+                        </div>
+                        <div class="content" style="display: flex; flex-direction: column;">
+                            <div class="text_small" style="font-weight: bold"><?= $item->small_text ?></div>
+                            <div class="text_big"><?= $item->big_text ?></div>
                         </div>
                     </div>
-                </section>
-            </div>
-        </div>
-        <?php endif; ?>
-    </div>
+                    <?php endforeach;?>
+                </div>
+                <?php endif ?>
+

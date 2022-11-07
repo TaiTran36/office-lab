@@ -4,7 +4,6 @@ get_header();
 global $wp;
 $current_url = home_url($wp->request);
 ?>
-<div class="collection_text">Shoes</div>
 <div class="shop-container mx-auto mb-5">
     <?php if (is_shop() or is_product_category()) : ?>
         <section id="shop-categories" class="sp-topbar col-12 col-md-12 col-lg-9 px-md-5 hidden">
@@ -52,8 +51,7 @@ $current_url = home_url($wp->request);
     <?php endif; ?>
     <section id="shop-container" class="col-12 col-md-12 <?php if (is_shop() or is_product_category()) echo 'col-lg-9 px-md-5' ?>">
         <?php if (is_shop()) { ?>
-<!--            <a href="javascript:void(0)"><img src="--><?php //echo get_template_directory_uri() . '/assets/images/banner/Icons-Banner.jpg'; ?><!--" width="100%" style="margin-bottom:20px;"></a>-->
-        <?php } ?>
+         <?php } ?>
         <?php
         if (isset($_GET['search'])) {
             set_query_var('search', $_GET['search']);

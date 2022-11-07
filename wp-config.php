@@ -20,7 +20,7 @@
 
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'test' );
+define( 'DB_NAME', 'office' );
 
 /** Database username */
 define( 'DB_USER', 'root' );
@@ -28,7 +28,7 @@ define( 'DB_USER', 'root' );
 /** Database password */
 define( 'DB_PASSWORD', '' );
 
-//exydXFNm)p9UyxITt#
+    //ao5#E*jQ2KovUlvjwa
 
 /** Database hostname */
 define( 'DB_HOST', 'localhost' );
@@ -85,7 +85,7 @@ define( 'WP_DEBUG', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
 
-
+define( 'ROOT_URL', 'http://web.local' );
 
 /* That's all, stop editing! Happy publishing. */
 

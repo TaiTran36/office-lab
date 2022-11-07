@@ -1,0 +1,14 @@
+2022-11-07T02:22:12+00:00 CRITICAL Out of memory (allocated 27055357952) (tried to allocate 20480 bytes) in C:\xampp\htdocs\office-lab\wp-includes\plugin.php on line 165
+
+2022-11-07T02:49:43+00:00 CRITICAL Uncaught Error: Call to a member function is_registration_enabled() on null in C:\xampp\htdocs\office-lab\wp-content\themes\office-lab\woocommerce\checkout\form-checkout.php:24
+Stack trace:
+#0 C:\xampp\htdocs\office-lab\wp-includes\template.php(772): require()
+#1 C:\xampp\htdocs\office-lab\wp-includes\template.php(716): load_template('C:\\xampp\\htdocs...', false, Array)
+#2 C:\xampp\htdocs\office-lab\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#3 C:\xampp\htdocs\office-lab\wp-content\themes\office-lab\singular.php(16): get_template_part('woocommerce/che...')
+#4 C:\xampp\htdocs\office-lab\wp-includes\template-loader.php(106): include('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\office-lab\wp-blog-header.php(19): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\office-lab\index.php(17): require('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\office-lab\wp-content\themes\office-lab\woocommerce\checkout\form-checkout.php on line 24
+

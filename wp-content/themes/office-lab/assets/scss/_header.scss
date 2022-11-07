@@ -1,0 +1,8 @@
+.header_section {
+  font-weight: $font__semibold;
+  box-shadow: 0 10px 5px -2px #e6e6e6;
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+}

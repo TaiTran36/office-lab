@@ -1,6 +1,6 @@
-.divs {
-  background: #ffffff;
-  .element {
-    color: #ffffff;
-  }
-}
+@import "common";
+@import "header";
+@import "component_left";
+
+
+@import "responsive";

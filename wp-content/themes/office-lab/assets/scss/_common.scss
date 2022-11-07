@@ -1,0 +1,23 @@
+@import "variables";
+
+* {
+  box-sizing: border-box
+}
+
+*:before,
+*:after {
+  box-sizing: border-box
+}
+
+html,
+body {
+  position: relative
+}
+
+
+body,
+html {
+  height: 100%;
+  font-family: $font__montserrat;
+  font-weight: $font__medium;
+}
